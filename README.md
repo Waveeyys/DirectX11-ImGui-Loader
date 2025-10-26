@@ -6,34 +6,41 @@ A clean and modular **framework base** built around **Dear ImGui** and **DirectX
 
 ## ✨ Features
 
-- 🎨 **ImGui Integration** — Full support for Dear ImGui (latest docking branch)
-- ⚙️ **DirectX 11 Renderer** — High-performance rendering backend
-- 🧩 **Modular Loader** — Lightweight ImGui loader for easy initialization
-- 🔧 **Framework Base** — Organized structure for quick extension and maintenance
-- 🪶 **Input Handling** — Win32 + ImGui IO integration
-- 🧠 **Memory Management** — RAII-friendly object lifecycle
-- 💻 **Debug Console** — Optional in-app console for debugging/logging
-- 🔄 **Hot Reload Ready** — Designed for runtime reload of modules or configs
+- 🎨 **Dear ImGui Integration** — Includes full support for the latest docking branch
+- ⚙️ **DirectX 11 Renderer** — Optimized, minimal, and efficient rendering backend
+- 🧩 **ImGui Loader** — Modular ImGui initialization and cleanup system
+- 🔧 **Framework Base** — Clean architecture for rapid expansion
+- 🪶 **Input Handling** — Integrated Win32 + ImGui IO management
+- 💻 **Debug Console** — Optional in-app console/log viewer
+- 🧠 **Memory Safe** — RAII-based resource management and clean shutdown
+- 📦 **Extension Friendly** — Built with `ext/` for third-party or modular expansion
+- 🔄 **Hot Reload Ready** — Designed to support runtime reload of resources or modules
 
 ---
 
 ## 🧱 Project Structure
 
-**Framework\ext**
-Framework\ext\freetype
-Framework\ext\ImGui
-Framework\ext\misc
-Framework\ext\SDK
-
-**Framework\src\Headers**
-Framework\src\Headers\font_awesome.h
-Framework\src\Headers\fonts.h
-Framework\src\Headers\images.h
-Framework\src\Headers\main.h
-Framework\src\Headers\particles.h
-Framework\src\Headers\settings.h
-
-**Framework\src\Sources**
-Framework\src\Sources\framework.cpp
-Framework\src\Sources\main.cpp
-Framework\src\Sources\ui.cpp
+```text
+Framework/
+│
+├── ext/                         # External / third-party libraries
+│   ├── freetype/                # Font rendering library
+│   ├── ImGui/                   # Dear ImGui source + backends
+│   ├── misc/                    # Additional ImGui extensions or utilities
+│   └── SDK/                     # SDK or API headers used by the framework
+│
+├── src/
+│   ├── Headers/                 # Core header files
+│   │   ├── font_awesome.h
+│   │   ├── fonts.h
+│   │   ├── images.h
+│   │   ├── main.h
+│   │   ├── particles.h
+│   │   └── settings.h
+│   │
+│   └── Sources/                 # Source files implementing framework logic
+│       ├── framework.cpp
+│       ├── main.cpp
+│       └── ui.cpp
+│
+└── build/                       # Generated binaries and build output
